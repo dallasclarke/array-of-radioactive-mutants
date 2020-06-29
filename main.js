@@ -9,26 +9,31 @@ function addMeToStart (arr) {
   arr.unshift('Colin');
 }
 
-function changeLast (arr) {
-  arr.pop();
-  
+function changeLast (arr, value) {
+    arr.splice(arr.length -1, 1, value)
   
 }
 
-function changeAllValuesTo (arr) {
-
-}
-
-function oddOrEven (arr) {
-  if (arr % 2 === 0) {
-    return "even"
-  } else {
-    return "odd"
+function changeAllValuesTo (arr, value) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = value;
   }
 }
 
-function changeNextThreeToValue (arr) {
-  arr.splice(2, 3,)
+function oddOrEven (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      arr[i] = 'even';
+    } else {
+      arr[i] = 'odd'
+    }
+  }
+}
+
+function changeNextThreeToValue (start, arr, value) {
+  for (let i = start; i < start + 3; i++) {
+    arr[i] = value;
+  }
 }
 
 
